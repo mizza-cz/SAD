@@ -78,6 +78,8 @@
     transform: rotate(calc(360deg / 8 * var(--i)));
     transform-origin: 226px;
     left: 0;
+    box-sizing: border-box;
+    width: 117px;
     &--atletika {
       .rozcestnik__logo {
         transform: rotate(-74deg) translate(1px, 3px);
