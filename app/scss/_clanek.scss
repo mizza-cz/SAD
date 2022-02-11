@@ -1,0 +1,97 @@
+.clanek-page {
+  margin-bottom: 58px;
+  &__content {
+    margin-bottom: 160px;
+  }
+}
+.anotace {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140.6%;
+  margin-bottom: 40px;
+}
+
+// clanky
+.clanky {
+  margin-bottom: 40px;
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-bottom: 12px;
+  }
+}
+.clanek {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding: 0 6px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 10;
+  &:hover {
+    p {
+      text-decoration: underline;
+    }
+  }
+  &__info {
+    padding: 16px;
+    line-height: 136.6%;
+    font-weight: 700;
+    p {
+      color: $gray;
+    }
+    span {
+      display: block;
+      color: $blue;
+      margin-bottom: 8px;
+      font-size: 1.125rem;
+      letter-spacing: 0.6px;
+    }
+  }
+  a {
+    width: 100%;
+  }
+  &__img {
+    height: 260px;
+    width: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .clanek-page__content {
+    margin-bottom: 80px;
+  }
+  .clanek-page {
+    margin-bottom: 0;
+  }
+  .clanek__img {
+    height: 170px;
+  }
+}
+@media (max-width: 820px) {
+  .clanek-page__content {
+    margin-bottom: 48px;
+  }
+  .clanek {
+    max-width: 100%;
+    flex: 100%;
+    &__info {
+      padding: 16px 0;
+    }
+    &__img {
+      height: auto;
+    }
+  }
+  .typography img {
+    margin-bottom: 32px;
+  }
+  .typography h3 {
+    font-size: 1.7rem;
+    margin-bottom: 32px;
+  }
+}

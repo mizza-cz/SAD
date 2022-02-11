@@ -1,0 +1,334 @@
+.rozcestnik {
+  padding-top: 25px;
+  padding-bottom: 48px;
+  &__info {
+    position: relative;
+    width: 395px;
+    &-box {
+      position: absolute;
+      width: 100%;
+      a {
+        color: $blue;
+        font-size: 1.125rem;
+        font-weight: 700;
+        display: block;
+        transition: all 0.3s;
+        position: relative;
+        width: fit-content;
+      }
+      h4 {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        line-height: 27.32px;
+        color: $gray;
+        letter-spacing: 0.165em;
+        margin-bottom: 6px;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 461px;
+    height: 435px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: rotate(68deg);
+  }
+  .hover {
+    opacity: 0;
+    position: absolute;
+    width: 110px;
+    height: 108px;
+    top: 3px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    opacity: 0;
+    margin: 0 auto;
+    transition: all 0.3s;
+    z-index: 99;
+    img {
+    }
+  }
+  &__logo {
+    cursor: pointer;
+    width: 114px;
+    height: 116px;
+
+    //  border: 2px solid #1a1a18;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__item {
+    position: absolute;
+    z-index: 20;
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    transform-origin: 226px;
+    left: 0;
+    &--atletika {
+      .rozcestnik__logo {
+        transform: rotate(-74deg) translate(1px, 3px);
+      }
+      .rozcestnik__info-box {
+        position: absolute;
+        text-align: right;
+        left: -303px;
+        top: 156px;
+        transform: rotate(-68deg);
+        a {
+          margin-left: auto;
+        }
+      }
+    }
+    &--florbal {
+      .rozcestnik__logo {
+        transform: rotate(-118deg) translate(1px, 2px);
+      }
+      .rozcestnik__info-box {
+        position: absolute;
+        text-align: left;
+        left: -305px;
+        top: -327px;
+        transform: rotate(-112deg);
+      }
+    }
+    &--beh {
+      .rozcestnik__logo {
+        transform: rotate(-156deg) translate(7px, -5px);
+      }
+      .rozcestnik__info-box {
+        position: absolute;
+        text-align: left;
+        left: -161px;
+        top: -257px;
+        transform: rotate(-79deg);
+      }
+    }
+
+    &--lyzovani {
+      .hover {
+        top: 8px;
+      }
+      .rozcestnik__logo {
+        transform: rotate(159deg) translate(8px, -2px);
+        height: 124px;
+      }
+      .rozcestnik__info-box {
+        position: absolute;
+        text-align: left;
+        left: -414px;
+        top: 49px;
+        transform: rotate(157deg);
+      }
+    }
+    &--kajak {
+      .hover {
+        top: 8px;
+      }
+      .rozcestnik__logo {
+        transform: rotate(112deg) translate(4px, -5px);
+        height: 120px;
+      }
+      .rozcestnik__info-box {
+        position: absolute;
+        text-align: left;
+        left: -289px;
+        top: 202px;
+        transform: rotate(112deg);
+      }
+    }
+    &--plavani {
+      .rozcestnik__logo {
+        transform: rotate(69deg) translate(6px, -3px);
+        width: 117px;
+      }
+      .rozcestnik__info-box {
+        position: absolute;
+        text-align: right;
+        left: -290px;
+        top: -360px;
+        transform: rotate(67deg);
+        a {
+          margin-left: auto;
+        }
+      }
+    }
+    &--power {
+      .rozcestnik__logo {
+        transform: rotate(23deg) translate(-1px, 1px);
+        width: 116px;
+      }
+      .rozcestnik__info-box {
+        position: absolute;
+        text-align: right;
+        left: -399px;
+        top: -206px;
+        -webkit-transform: rotate(67deg);
+        -ms-transform: rotate(67deg);
+        transform: rotate(22deg);
+        a {
+          margin-left: auto;
+        }
+      }
+    }
+    &--surfing {
+      .hover {
+        top: 8px;
+        height: 110px;
+      }
+      .rozcestnik__logo {
+        transform: rotate(-24deg) translate(-2px, -2px);
+        width: 116px;
+        height: 122px;
+      }
+      .rozcestnik__info-box {
+        position: absolute;
+        text-align: right;
+        left: -402px;
+        top: -0px;
+        transform: rotate(-23deg);
+        a {
+          margin-left: auto;
+        }
+      }
+    }
+
+    &:hover {
+      .hover {
+        opacity: 1;
+      }
+      .rozcestnik__info-box a {
+        padding-right: 27px;
+        &::before {
+          content: '';
+          position: absolute;
+          background-image: url('../images/svg/arrow-left.svg');
+          width: 16px;
+          height: 16px;
+          right: 2px;
+          bottom: 3px;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+.rozcestnik-box {
+  width: 342.48px;
+  height: 342.48px;
+  border-radius: 50%;
+  //   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-68deg);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1240px) {
+  .rozcestnik__info {
+    width: 356px;
+  }
+  .rozcestnik__item--atletika .rozcestnik__info-box {
+    left: -280px;
+    top: 110px;
+  }
+  .rozcestnik__item--florbal .rozcestnik__info-box {
+    left: -280px;
+    top: -280px;
+  }
+  .rozcestnik__item--beh .rozcestnik__info-box {
+    left: -145px;
+    top: -236px;
+  }
+  .rozcestnik__item--lyzovani .rozcestnik__info-box {
+    left: -359px;
+    top: 25px;
+  }
+  .rozcestnik__item--kajak .rozcestnik__info-box {
+    left: -243px;
+    top: 147px;
+  }
+  .rozcestnik__item--plavani .rozcestnik__info-box {
+    left: -245px;
+    top: -310px;
+  }
+  .rozcestnik__item--power .rozcestnik__info-box {
+    left: -361px;
+    top: -195px;
+  }
+  .rozcestnik__item--surfing .rozcestnik__info-box {
+    left: -370px;
+    top: -20px;
+  }
+}
+
+@media (max-width: 970px) {
+  .rozcestnik__info {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .rozcestnik__item {
+    transform-origin: 188px;
+    left: -48px;
+  }
+  .rozcestnik .hover {
+    width: 76px;
+    height: 76px;
+    top: 2px;
+  }
+  .rozcestnik__wrapper {
+    width: 300px;
+    height: 300px;
+    left: -10px;
+  }
+  .rozcestnik-box {
+    width: 300px;
+    height: 300px;
+  }
+  .rozcestnik__item--power .rozcestnik__logo,
+  .rozcestnik__item--plavani .rozcestnik__logo {
+    width: 80px;
+  }
+  .rozcestnik__item--surfing .rozcestnik__logo {
+    transform: rotate(-24deg) translate(29px, -2px);
+    height: 82px;
+    width: 80px;
+  }
+  .rozcestnik__logo {
+    width: 80px;
+    height: 80px;
+  }
+  .rozcestnik__item--power .rozcestnik__logo {
+    transform: rotate(23deg) translate(28px, 14px);
+  }
+  .rozcestnik__item--kajak .rozcestnik__logo {
+    height: 84px;
+  }
+  .rozcestnik__item--lyzovani .rozcestnik__logo {
+    height: 86px;
+    transform: rotate(159deg) translate(-11px, -2px);
+  }
+  .rozcestnik__item--beh .rozcestnik__logo {
+    transform: rotate(-156deg) translate(-13px, -5px);
+  }
+}
