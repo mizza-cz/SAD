@@ -73,6 +73,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    border-top: 1px solid $light;
+    padding-top: 20px;
+
     h5 {
       color: $gray;
       line-height: 89.1%;
