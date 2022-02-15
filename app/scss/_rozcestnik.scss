@@ -1,6 +1,21 @@
 .rozcestnik {
   padding-top: 25px;
   padding-bottom: 48px;
+  position: relative;
+  &::before {
+    content: 'sporty';
+    position: absolute;
+    display: block;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    bottom: -63px;
+    left: -5px;
+    font-size: 7.5rem;
+    line-height: 89.1%;
+    color: $light;
+    font-weight: 700;
+  }
   &__info {
     position: relative;
     width: 395px;
@@ -42,7 +57,7 @@
     opacity: 0;
     position: absolute;
     width: 110px;
-    height: 108px;
+    height: 110px;
     top: 3px;
     left: 0;
     bottom: 0;
@@ -53,6 +68,7 @@
     transition: all 0.3s;
     z-index: 99;
     img {
+      border-radius: 50%;
     }
   }
   &__logo {
@@ -81,6 +97,9 @@
     box-sizing: border-box;
     width: 117px;
     &--atletika {
+      .hover {
+        transform: rotate(6deg);
+      }
       .rozcestnik__logo {
         transform: rotate(-74deg) translate(1px, 3px);
       }
@@ -96,6 +115,9 @@
       }
     }
     &--florbal {
+      .hover {
+        transform: rotate(6deg);
+      }
       .rozcestnik__logo {
         transform: rotate(-118deg) translate(1px, 2px);
       }
@@ -138,8 +160,10 @@
     }
     &--kajak {
       .hover {
+        transform: rotate(6deg);
         top: 8px;
       }
+
       .rozcestnik__logo {
         transform: rotate(112deg) translate(4px, -5px);
         height: 120px;
@@ -153,6 +177,9 @@
       }
     }
     &--plavani {
+      .hover {
+        transform: rotate(6deg);
+      }
       .rozcestnik__logo {
         transform: rotate(69deg) translate(6px, -3px);
         width: 117px;
@@ -190,6 +217,7 @@
       .hover {
         top: 8px;
         height: 110px;
+        transform: rotate(6deg);
       }
       .rozcestnik__logo {
         transform: rotate(-24deg) translate(-2px, -2px);
@@ -287,8 +315,27 @@
     display: none;
   }
 }
-
+@media (max-width: 740px) {
+  .rozcestnik {
+    padding-top: 0;
+  }
+  .rozcestnik::before {
+    position: relative;
+    font-size: 5rem;
+    transform: rotate(0deg);
+    bottom: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto 32px;
+  }
+}
 @media (max-width: 500px) {
+  .rozcestnik::before {
+    font-size: 4rem;
+    margin-bottom: 60px;
+  }
   .rozcestnik__item {
     transform-origin: 188px;
     left: -48px;
