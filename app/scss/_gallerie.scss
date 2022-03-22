@@ -1,0 +1,43 @@
+.fotogallerie {
+  h2 {
+    margin-bottom: 32px;
+    @media (max-width: 740px) {
+      font-size: 32px;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 24px;
+  }
+  .clanek {
+    max-width: 25%;
+    flex: 0 0 25%;
+    padding: 0 8px;
+    @media (max-width: 840px) {
+      max-width: 33.333%;
+      flex: 0 0 33.333%;
+    }
+    @media (max-width: 600px) {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+    @media (max-width: 400px) {
+      max-width: 100%;
+      flex: 100%;
+      .clanek__img {
+        height: auto;
+      }
+    }
+    &__img {
+      height: 170px;
+    }
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
