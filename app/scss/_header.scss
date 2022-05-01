@@ -99,10 +99,8 @@
     position: relative;
 
     &:hover {
-      .navigation__item {
-      }
       .dropdown-menu {
-        max-height: 600px;
+       
         transition: all 0.8s;
         display: block;
         z-index: 28;
